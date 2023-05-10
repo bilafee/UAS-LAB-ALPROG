@@ -30,3 +30,17 @@ int main(int argc, char *argv[]) {
 		printf("Pilihan [1..5] : ");scanf("%d", &pil);
 		switch(pil)
 		{
+case 1 : {
+				printf("Judul buku: ");fflush(stdin);
+				gets(buku[i].judul);
+				printf("Pengarang: ");fflush(stdin);
+				gets(buku[i].pengarang);
+				printf("Tahun terbit: ");
+				scanf("%i", &buku[i].tahun_terbit);
+					printf("Penerbit: ");fflush(stdin);
+				gets(buku[i].penerbit);
+				buku[i].pinjam = 'n';
+				printf("Berhasil menambah buku\n");
+				i++;
+				break;
+			}
