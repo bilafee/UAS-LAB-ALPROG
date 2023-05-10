@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define maks 50 // maksimal array
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+typedef struct
+{
+	char judul[51];
+	char penerbit[31];
+	int tahun_terbit;
+	char pengarang[31];
+	char pinjam;
+}data_buku;
+
+data_buku buku[maks];
+
+int main(int argc, char *argv[]) {
+	int pil;
+	int i=0,k=0;
+	do
+	{
+		printf("1. Tambah Buku\n");
+		printf("2. Cari Buku\n");
+		printf("3. Pinjam Buku\n");
+		printf("4. Kembalikan Buku\n");
+		printf("5. Keluar\n");
+		printf("Pilihan [1..5] : ");scanf("%d", &pil);
+		switch(pil)
+		{
