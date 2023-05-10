@@ -98,3 +98,36 @@ case 3: {
 				}
 				break;
 			}
+case 4: {
+				int ketemu=-1;
+				int j=0;
+				char cari[51];
+				char ya;
+				printf("Cari buku: ");fflush(stdin);
+				gets(cari);
+				while(ketemu==-1 && j<i)
+				{
+					if(strcmp(cari,buku[j].judul)==0)ketemu=j;
+				}
+				if(ketemu>=0) {
+					printf("Judul buku: %s\n", buku[ketemu].judul);
+					printf("Pengarang: %s\n", buku[ketemu].pengarang);
+					printf("Tahun terbit: %d\n", buku[ketemu].tahun_terbit);
+					printf("Penerbit: %s\n", buku[ketemu].penerbit);
+					if(buku[ketemu].pinjam == 'y') {
+						printf("Ingin mengembalikan buku ini?[y/n] ");fflush(stdin);ya = getchar();
+						printf("\n");
+						if(ya =='y') {
+							buku[ketemu].pinjam = 'n'; 
+							printf("Buku berhasil dikembalikan\n");
+						}
+					}
+					else {
+						printf("Buku belum dipinjam\n");
+					}
+				}
+				else {
+					printf("Tidak ditemukan buku dengan judul %s\n", cari);
+				}
+				break;
+			}
