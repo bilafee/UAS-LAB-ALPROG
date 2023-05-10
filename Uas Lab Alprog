@@ -44,3 +44,24 @@ case 1 : {
 				i++;
 				break;
 			}
+case 2 : {
+				int ketemu=-1;
+				int j=0;
+				char cari[51];
+				printf("Cari buku: ");fflush(stdin);
+				gets(cari);
+				while(ketemu==-1 && j<i)
+				{
+					if(strcmp(cari,buku[j].judul)==0)ketemu=j;
+				}
+				if(ketemu>=0) {
+					printf("Judul buku: %s\n", buku[ketemu].judul);
+					printf("Pengarang: %s\n", buku[ketemu].pengarang);
+					printf("Tahun terbit: %d\n", buku[ketemu].tahun_terbit);
+					printf("Penerbit: %s\n", buku[ketemu].penerbit);
+				}
+				else {
+					printf("Tidak ditemukan buku dengan judul %s\n", cari);
+				}
+				break;
+			}
